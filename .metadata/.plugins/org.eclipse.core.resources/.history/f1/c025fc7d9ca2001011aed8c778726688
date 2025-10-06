@@ -1,0 +1,12 @@
+package next.neetcode;
+
+public class bai1{
+	// tên của class trùng với tên file
+	public static void main(String[] args) {
+		//khó hơn nhá
+		// in ra variable
+		int a = 10;// integer : số nguyên
+		System.out.print(a);
+		
+	}
+}

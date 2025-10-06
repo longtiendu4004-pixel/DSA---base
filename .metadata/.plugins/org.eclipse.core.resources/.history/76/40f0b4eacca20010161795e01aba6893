@@ -1,0 +1,35 @@
+package next.neetcode;
+
+public class Linkedlist {
+	public Node head;
+	
+	public Linkedlist(Node head) {
+		this.head = head;
+	}
+	public void printLinkedList() {
+		if(head == null) {
+			System.out.print("List is empty");
+		}
+		Node curr = head;
+		while(curr != null) {
+			System.out.print(curr.data);
+			curr = curr.next;
+			if(curr != null) {
+				System.out.print(" --> ");
+			}
+		}
+	}
+	public boolean search(int data) {
+		if(head == null) {
+			return false;
+		}
+		Node curr = head;
+		while(curr != null) {
+			if(curr.data == data) {
+				return true;
+			}
+			curr = curr.next;
+		}
+		return false;
+	}
+}

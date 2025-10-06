@@ -1,0 +1,8 @@
+package next.neetcode;
+
+public class bai1{
+	// tên của class trùng với tên file
+	public static void main(String[] args) {
+		System.out.print("Đây là hàm in ra màn hình");
+	}
+}

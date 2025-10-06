@@ -1,0 +1,15 @@
+package next.neetcode;
+
+public class bai1{
+	// tên của class trùng với tên file
+	public static void main(String[] args) {
+		//khó hơn nhá
+		// in ra variable
+		int a = 5;
+		//double như float nhưng cần nhiều bộ nhớ hơn
+		float b = 5;// b = 5 nhưng in ra 5.0
+		System.out.println(a);
+		System.out.print(b);
+		
+	}
+}
