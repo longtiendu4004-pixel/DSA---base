@@ -1,0 +1,23 @@
+package linkedlist;
+
+public class Linkedlist {
+	Node head;
+	public Linkedlist() {
+		
+	}
+	public void printLinkedList() {
+		if(head == null) {
+			System.out.print("List is empty");
+		}else {
+			Node temp =  head;
+			while(temp != null) {
+				System.out.print(temp.value);
+				temp = temp.next;
+				if(temp != null) {
+					System.out.print(" --> ");
+				}
+			}
+		}
+		
+	}
+}
