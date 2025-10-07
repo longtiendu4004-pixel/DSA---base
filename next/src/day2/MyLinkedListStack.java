@@ -1,0 +1,55 @@
+package day2;
+
+import day1.Node;
+
+public class MyLinkedListStack implements IStackQueue{
+	private Node top;
+	public MyLinkedListStack() {
+		top = null;
+	}
+	@Override
+	public boolean push(int value) {
+		// TODO Auto-generated method stub
+		if(!isFull()) {
+			Node newNode = new Node(value);
+			newNode.next = top; // nếu top = null vẫn ổn
+			top = newNode;
+			return true;
+		}
+		return false;
+	}
+	@Override
+	public int pop() {
+		// TODO Auto-generated method stub
+		if(isEmpty())return -1;
+		int value = top.data;
+		top = top.next;
+		return value;
+	}
+	@Override
+	public boolean isFull() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return top ==  null;
+	}
+	@Override
+	public void show() {
+		// TODO Auto-generated method stub
+		if(isEmpty()) {
+			System.out.println("Stack is empty");
+			return;
+		}
+		Node curr = top;
+		while(curr != null) {
+			System.out.print(curr.data + " ");
+			curr = curr.next;
+		}
+		System.out.println();
+		
+	}
+	
+}

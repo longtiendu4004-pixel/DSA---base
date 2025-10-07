@@ -1,0 +1,33 @@
+package day2;
+
+import java.util.*;
+
+
+public class Solution_20 {
+	public static boolean isValid(String s) {
+		Map<Character, Character> map = new HashMap();
+		map.put(')', '(');
+		map.put(']', '[');
+		map.put('}', '{');
+		Stack<Character> stack = new Stack();
+		for(int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			if(map.containsKey(c)) {
+				//là ngoặc đóng
+				if(!stack.empty() && map.get(c) == stack.peek()) {
+					stack.pop();
+				}else {
+					return false;
+				}
+			}else {
+				//là ngoặc mở
+				stack.push(c);
+			}
+		}
+		return stack.empty();
+	}
+	public static void main(String[] args) {
+		String s = ")(";
+		System.out.print(isValid(s));
+	}
+}
