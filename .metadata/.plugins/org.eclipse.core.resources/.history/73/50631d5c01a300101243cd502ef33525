@@ -1,0 +1,27 @@
+package day2;
+
+public class Test {
+	public static void main(String[] args) {
+		MyArrayStack stack = new MyArrayStack(5);
+		stack.push(0);
+		stack.show();
+		
+		stack.push(1);
+		stack.show();
+		
+		stack.push(2);
+		stack.show();
+		
+		stack.push(3);
+		stack.show();
+		
+		stack.push(4);
+		stack.show();
+		
+		stack.push(5);
+		stack.show();
+		
+		System.out.println(stack.pop());
+		stack.show();
+	}
+}

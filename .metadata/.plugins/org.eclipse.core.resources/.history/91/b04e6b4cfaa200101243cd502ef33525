@@ -1,0 +1,38 @@
+package day2;
+
+public class MyArrayStack implements IStackQueue{
+	
+	private int[] array;
+	private int SIZE;
+	private int topIndex = -1;
+	@Override
+	public boolean push(int value) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int pop() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean isFull() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void show() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

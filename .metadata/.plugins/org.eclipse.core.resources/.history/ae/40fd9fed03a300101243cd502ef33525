@@ -1,0 +1,21 @@
+package day2;
+
+public class Test {
+	public static void main(String[] args) {
+		MyArrayQueue queue = new MyArrayQueue(5);
+		queue.push(1);
+		queue.push(2);
+		queue.push(3);
+		queue.push(4);
+		queue.push(5);
+		queue.push(6);
+		queue.show();
+		
+		queue.pop();
+		queue.show();
+
+		
+		
+		
+	}
+}

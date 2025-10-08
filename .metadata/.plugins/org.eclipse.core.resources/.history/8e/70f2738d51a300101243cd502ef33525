@@ -1,0 +1,38 @@
+package day2;
+
+public class Test {
+	public static void main(String[] args) {
+		MyLinkedListStack stack = new MyLinkedListStack();
+		stack.push(4);
+		stack.push(3);
+		stack.push(2);
+		stack.push(1);
+		stack.push(0);
+		stack.show();
+		
+		stack.pop();
+		stack.show();
+		
+		stack.pop();
+		stack.show();
+		
+		stack.pop();
+		stack.show();
+		
+		stack.pop();
+		stack.show();
+		
+		stack.pop();
+		stack.show();
+		
+		stack.pop();
+		stack.show();
+		
+		
+		
+
+		
+		
+		
+	}
+}
