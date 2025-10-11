@@ -1,0 +1,21 @@
+package day5;
+import java.util.*;
+
+public class SlidingWindow {
+	public static int findLengthSameValue1(int[] arr) {
+		Queue<Integer> check = new LinkedList<Integer>();
+		ArrayList<Integer> longest = new ArrayList<>();
+		for(int i = 0; i < arr.length; i++) {
+			check.add(arr[i]);
+			while(check.peek() != arr[i]) {
+				check.poll();
+			}
+			longest.add(check.size());
+		}
+		return Collections.max(longest);
+	}
+	public static void main(String[] args) {
+		int[] arr = {7, 3, 3, 3, 2, 2, 2, 2, 2};
+		System.out.print(findLengthSameValue1(arr));
+	}
+}

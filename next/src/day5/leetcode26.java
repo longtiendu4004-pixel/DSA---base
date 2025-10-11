@@ -1,0 +1,25 @@
+package day5;
+
+import java.util.*;
+
+public class leetcode26 {
+	public static int[] removeDuplicates(int[] nums) {
+		int left = 0, right = 1;
+		int n = nums.length;
+		while(right < n) {
+			if(nums[left] != nums[right]) {
+				left++;
+				nums[left] = nums[right];
+			}
+			right++;
+		}
+		for(int i = left + 1; i < n; i++) {
+			nums[i] = -1;
+		}
+		return nums;
+    }
+	public static void main(String[] args) {
+		int[] a = {1, 1, 1, 1, 3, 5, 5, 6, 7, 8};
+		System.out.print(Arrays.toString(removeDuplicates(a)));
+	}
+}
