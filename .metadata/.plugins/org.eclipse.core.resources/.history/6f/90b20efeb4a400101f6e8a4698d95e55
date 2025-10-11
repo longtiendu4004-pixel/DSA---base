@@ -50,11 +50,6 @@ public class MyLinkedListQueue implements IStackQueue {
 		// TODO Auto-generated method stub
 		return tail == null && head == null;
 	}
-	public int peek() {
-		if(head != null)return head.data;
-		return 0;
-	}
-
 
 	@Override
 	public void show() {
