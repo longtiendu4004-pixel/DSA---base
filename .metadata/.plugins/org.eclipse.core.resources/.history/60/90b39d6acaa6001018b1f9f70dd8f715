@@ -1,0 +1,17 @@
+package day5;
+
+public class leetcode3 {
+	public int lengthOfLongestSubstring(String s) {
+        int n = s.length();
+        char[] text = s.toCharArray();
+        int left = 0;
+        int right = 0;
+        return 0;
+        
+    }
+	public static void main(String args[]) {
+		String s = "Long";
+		char[] text = s.toCharArray();
+		System.out.print(text[0] - text[1]);
+	}
+}

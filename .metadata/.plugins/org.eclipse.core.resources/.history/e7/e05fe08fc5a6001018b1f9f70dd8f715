@@ -9,13 +9,14 @@ public class leetcode643 {
         	sum += nums[i];
         }
         //tìm max trong sum 
-
+        int left = 0;
+        int right = k;
         int max = sum;
-        for(int i = k; i < nums.length; i++) {
-        	sum = sum + nums[i] - nums[i - k];
-        	if(sum > max) {
-        		max = sum;
-        	}
+        while(right < n) {
+        	sum = sum - nums[left] + nums[right];
+        	max = Math.max(max, sum);
+        	left++;
+        	right++;
         }
         return (double) max / k;
     }
