@@ -1,5 +1,28 @@
 package day5;
 
 public class leetcode643 {
-
+	public static double findMaxAverage(int[] nums, int k) {
+        int n = nums.length;
+        //tính tổng k phần tử đầu tiên
+        int sum = 0;
+        for(int i = 0; i < k; i++) {
+        	sum += nums[i];
+        }
+        //tìm max trong sum 
+        int left = 0;
+        int right = k;
+        int max = sum;
+        while(right < n) {
+        	sum = sum - nums[left] + nums[right];
+        	max = Math.max(max, sum);
+        	left++;
+        	right++;
+        }
+        return max;
+    }
+	public static void main(String[] args) {
+		int[] nums = {1,12,-5,-6,50,3};
+		int k = 4;
+		System.out.print(findMaxAverage(nums, k));
+	}
 }
