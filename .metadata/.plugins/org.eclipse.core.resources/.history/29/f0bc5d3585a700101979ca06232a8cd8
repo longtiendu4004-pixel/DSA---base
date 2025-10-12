@@ -1,0 +1,52 @@
+package day6;
+
+class Node {
+	public int value;
+	public Node next;
+	public Node(int value) {
+		this.value = value;
+	}
+}
+public class MiniumStack {
+    public Node head;
+    public void push(int val) {
+        Node newNode = new Node(val);
+        newNode.next = head;
+        head = newNode;
+    }
+    
+    public void pop() {
+        head = head.next;
+    }
+    
+    public int top() {
+        return head.value;
+    }
+    
+    public int getMin() {
+    	int min = Integer.MAX_VALUE;
+    	Node curr = head;
+    	while(curr != null) {
+    		if(curr.value < min) {
+    			min = curr.value;
+    		}
+    		curr = curr.next;
+    	}
+        return min;
+    }
+    public void show() {
+    	Node curr = head;
+    	while(curr != null) {
+    		System.out.print(curr.value + " ");
+    	}
+    }
+    public static void main(String args[]) {
+    	MiniumStack stack = new MiniumStack();
+    	stack.push(10);
+    	stack.push(11);
+    	stack.push(12);
+    	stack.push(13);
+    	stack.push(14);
+    	stack.show();
+    }
+}
