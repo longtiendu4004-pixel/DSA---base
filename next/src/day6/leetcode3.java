@@ -1,0 +1,28 @@
+package day6;
+import java.util.*;
+public class leetcode3 {
+	public static List<Integer> lengthOfLongestSubstring(String s) {
+		int n = s.length();
+		int left = 0;
+		int right = 0;
+		Set<Character> part = new HashSet<>();
+		int lenM = 0;
+		List<Integer> copy = new ArrayList<>();
+		while(right < n) {
+			char c = s.charAt(right);
+			while(part.contains(c)) {
+				part.remove(s.charAt(left));
+				left++;
+			}
+			part.add(c);
+			copy.add(right - left + 1);
+			lenM = Math.max(lenM, right - left + 1);
+			right++;
+		}
+		return copy;
+	}
+	public static void main(String[] args) {
+		String s = "pwwkew";
+		System.out.print(lengthOfLongestSubstring(s).toString());
+	}
+}

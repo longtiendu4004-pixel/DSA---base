@@ -1,7 +1,5 @@
-package day5;
-
+package day6;
 import java.util.*;
-
 public class leetcode3 {
 	public static int lengthOfLongestSubstring(String s) {
 		int n = s.length();
@@ -9,23 +7,22 @@ public class leetcode3 {
 		int right = 0;
 		Set<Character> part = new HashSet<>();
 		int lenM = 0;
-
-		while (right < n) {
+		List<Integer> copy = new ArrayList<>();
+		while(right < n) {
 			char c = s.charAt(right);
-			while (part.contains(c)) {
+			while(part.contains(c)) {
 				part.remove(s.charAt(left));
 				left++;
 			}
 			part.add(c);
+			copy.add(right - left + 1);
 			lenM = Math.max(lenM, right - left + 1);
-
 			right++;
 		}
 		return lenM;
 	}
-
-	public static void main(String args[]) {
-		String s = "abcabcbb";
+	public static void main(String[] args) {
+		String s = "pwwkew";
 		System.out.print(lengthOfLongestSubstring(s));
 	}
 }
