@@ -1,9 +1,6 @@
 package day6;
 import java.util.*;
 public class leetcode3 {
-//	Câu này hay: ở chỗ tư duy set
-//	Ở bài này cần tư duy được left ở đâu mỗi khi right gặp phần tử trùng
-//  Luyện tập tư duy mỗi ngày nhé !!!!
 	public static List<Integer> lengthOfLongestSubstring(String s) {
 		int n = s.length();
 		int left = 0;
@@ -26,6 +23,6 @@ public class leetcode3 {
 	}
 	public static void main(String[] args) {
 		String s = "pwwkew";
-		System.out.print(lengthOfLongestSubstring(s).toString());//debug 
+		System.out.print(lengthOfLongestSubstring(s).toString());
 	}
 }
