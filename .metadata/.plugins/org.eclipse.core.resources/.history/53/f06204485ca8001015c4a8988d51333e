@@ -11,7 +11,9 @@ public class MyLinkedListQueue implements IStackQueue{
 			head = tail = newNode;
 		}else {
 			tail.next = newNode;
-			tail = tail.next;
+			tail = tail.next;//tail phải gán = tail.next
+							// chứ không phải là tail = newNode;
+							// vì nếu gán vậy thì chưa dịch chuyển được đỉa chỉ tail
 		}
 		return true;
 	}
@@ -23,10 +25,8 @@ public class MyLinkedListQueue implements IStackQueue{
 		int value = head.value;
 		if(head == tail) {
 			head = tail = null;
-		}else {
-			head = head.next;
 		}
-		
+		head = head.next;
 		return value;
 	}
 

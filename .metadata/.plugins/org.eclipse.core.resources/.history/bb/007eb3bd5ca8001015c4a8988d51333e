@@ -1,0 +1,45 @@
+package day8;
+
+import java.util.Stack;
+
+public class leetcode150 {
+	public static int evalRPN(String[] tokens) {
+		Stack<Integer> stack = new Stack<>();
+		int value = 0;
+		for (int i = 0; i < tokens.length; i++) {
+			switch (tokens[i]) {
+			case "+":
+				value = stack.peek();
+				stack.pop();
+				value += stack.peek();
+				stack.pop();
+				stack.add(value);
+			case "-":
+				value = stack.peek();
+				stack.pop();
+				value -= stack.peek();
+				stack.pop();
+				stack.add(value);
+			case "*":
+				value = stack.peek();
+				stack.pop();
+				value *= stack.peek();
+				stack.pop();
+				stack.add(value);
+			case "/":
+				value = stack.peek();
+				stack.pop();
+				value /= stack.peek();
+				stack.pop();
+				stack.add(value);
+
+			}
+			stack.add(Integer.parseInt(tokens[i]));
+		}
+		return value;
+	}
+	public static void main(String[] args) {
+		String[] tokens = {"2","1","+","3","*"};
+		System.out.print(evalRPN(tokens));
+	}
+}
