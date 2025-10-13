@@ -2,11 +2,14 @@ package day7;
 
 public class Test {
 	public static void main(String[] args) {
-		MyLinkedListQueue stack = new MyLinkedListQueue();
+		MyLinkedListStack stack = new MyLinkedListStack();
 		stack.push(0);
 		stack.push(1);
 		stack.push(2);
 		stack.push(3);
+		stack.pop();
+		stack.pop();
+		stack.pop();
 		stack.pop();
 		stack.show();
 		
