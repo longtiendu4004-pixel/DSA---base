@@ -8,9 +8,6 @@ public class Test {
 		stack.push(2);
 		stack.push(3);
 		stack.pop();
-		stack.pop();
-		stack.pop();
-		stack.pop();
 		stack.show();
 		
 	}
