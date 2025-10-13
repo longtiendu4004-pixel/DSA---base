@@ -16,6 +16,7 @@ java_string=230,219,116
 org.eclipse.wst.jsdt.ui.editor.tab.width=
 org.eclipse.wst.jsdt.ui.formatterprofiles.version=11
 org.eclipse.wst.jsdt.ui.javadoclocations.migrated=true
+proposalOrderMigrated=true
 semanticHighlighting.localVariable.color=121,171,255
 semanticHighlighting.localVariable.enabled=true
 semanticHighlighting.localVariableDeclaration.color=190,214,255

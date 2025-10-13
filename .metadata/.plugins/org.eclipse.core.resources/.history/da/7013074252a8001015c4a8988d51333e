@@ -1,0 +1,65 @@
+package day7;
+
+public class MyArrayQueue implements IStackQueue{
+	private int[] array;
+	private int SIZE;
+	private int head, tail;
+	public MyArrayQueue(int size) {
+		this.SIZE = size;
+		array = new int[SIZE];
+		head = tail = -1;
+	}
+	@Override
+	public boolean push(int value) {
+		// TODO Auto-generated method stub
+		if(!isFull()) {
+			if(isEmpty()) {
+				head++;
+			}
+			tail++;
+			array[tail] = value;
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public int pop() {
+		// TODO Auto-generated method stub
+		if(!isEmpty()) {
+			int value = array[head];
+			head++;
+			if(head > tail) {
+				head = tail = -1;
+			}
+			return value;
+			
+		}
+		return -1;
+	}
+
+	@Override
+	public boolean isFull() {
+		// TODO Auto-generated method stub
+		return tail == SIZE - 1;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return head == -1 && tail == -1;
+	}
+
+	@Override
+	public void show() {
+		// TODO Auto-generated method stub
+		if(isEmpty()) {
+			System.out.print("Queue is empty");
+			return;
+		}
+		for(int i = head; i <= tail; i++) {
+			System.out.print(array[i] + " ");
+		}
+	}
+	
+}

@@ -1,0 +1,9 @@
+package day7;
+
+public class Test {
+	public static void main(String[] args) {
+		MyArrayStack stack = new MyArrayStack(4);
+		stack.pop();
+		stack.show();
+	}
+}
