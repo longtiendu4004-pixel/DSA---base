@@ -16,6 +16,6 @@ public class Recursion {
 		return f[n];
 	}
 	public static void main(String[] args) {
-		System.out.print(fibo(10));
+		System.out.print(fibo(6));
 	}
 }

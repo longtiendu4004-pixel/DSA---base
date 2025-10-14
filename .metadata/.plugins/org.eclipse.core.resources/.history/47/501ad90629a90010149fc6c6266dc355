@@ -1,0 +1,25 @@
+package day9;
+
+public class backtracking {
+	public static int n = 2; // độ dài chuỗi nhị phân
+	public static int[] arr = new int[10];// mảng lưu từng phần tử tạm thời của chuỗi
+	public static void Try(int i) {// i ở đây là lần lượt từng index của chuỗi
+		for(int k = 0; k <= 1; k++) {// k = 0 hoặc 1 để biểu diễn mỗi kí tự
+			arr[i] = k;
+			if(i == n - 1) {
+				show();
+			}else {
+				Try(i + 1);
+			}
+		}
+	}
+	public static void show() {
+		for(int i = 0; i < n; i++) {
+			System.out.print(arr[i]);
+		}
+		System.out.println();
+	}
+	public static void main(String[] arafhmamhf) {
+		Try(2);
+	}
+}

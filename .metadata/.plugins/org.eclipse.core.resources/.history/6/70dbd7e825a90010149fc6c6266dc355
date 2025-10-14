@@ -1,21 +1,28 @@
 package day8;
 
 public class Recursion {
+	public static void printElement(int[] arr, int index) {
+		if(index < 0 || index >= arr.length) {
+			return;
+		}
+		System.out.print(arr[index] + " ");
+		printElement(arr, index - 1);
+	}
 
 	public static int[] f = new int[100];
 	public static int fibo(int n) {
-		
+		System.out.println("tính " + "f" + n);
 		if(f[n] != 0) {
 			return f[n];
 		}
 		if(n <= 2) {
 			return 1;
  		}
-		System.out.println("tính f" + n);
+		
 		f[n] = fibo(n - 1) + fibo(n - 2);
 		return f[n];
 	}
 	public static void main(String[] args) {
-		System.out.print(fibo(10));
+		System.out.print(fibo(4));
 	}
 }
