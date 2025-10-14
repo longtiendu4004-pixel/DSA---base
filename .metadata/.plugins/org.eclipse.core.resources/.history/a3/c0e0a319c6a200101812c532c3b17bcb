@@ -1,8 +1,0 @@
-package next.neetcode;
-
-import java.util.Scanner;
-
-public class Node{
-	
-}
-

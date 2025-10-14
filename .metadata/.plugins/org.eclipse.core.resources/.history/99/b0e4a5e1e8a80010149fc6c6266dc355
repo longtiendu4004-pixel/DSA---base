@@ -1,0 +1,24 @@
+package day8;
+
+public class Recursion {
+	public static void printElement(int[] arr, int index) {
+		if(index < 0 || index >= arr.length) {
+			return;
+		}
+		System.out.print(arr[index] + " ");
+		printElement(arr, index - 1);
+	}
+	public static int fibonaci(int n) {
+		System.out.println("tính " + "f" + n);
+		if(n <= 2) {
+			return 1;
+		}
+		
+		int f = fibonaci(n-2) + fibonaci(n-1);
+		return f;
+		
+	}
+	public static void main(String[] args) {
+		System.out.print(fibonaci(5));
+	}
+}
