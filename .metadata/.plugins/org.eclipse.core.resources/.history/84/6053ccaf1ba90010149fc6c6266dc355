@@ -1,0 +1,25 @@
+package day8;
+
+public class BaseBacktracking {
+	public static int n = 3;
+	public static int[] array = new int[100];
+	public static void inkq() {
+		for(int i = 0; i < n; i++) {
+			System.out.print(array[i]);
+		}
+		System.out.println();
+	}
+	public static void Try(int i) {
+		for(int j = 0; j <= 1; j++) {
+			array[i] = j;
+			if(i == n) {
+				inkq();
+			}else {
+				Try(i + 1);
+			}
+		}
+	}
+	public static void main(String[] args) {
+		Try(2);
+	}
+}
