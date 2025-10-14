@@ -1,8 +1,0 @@
-package day2;
-
-public class Test {
-	public static void main(String[] args) {
-		MyArrayStack stack = new MyArrayStack(5);
-		System.out.print(stack.isEmpty());
-	}
-}

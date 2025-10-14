@@ -1,0 +1,38 @@
+package day9;
+
+public class backtracking2 {
+	//bài tổ hợp chập k của n
+	// k là số giá trị muốn lấy
+	// n là không gian mẫu 
+	
+	// khai báo n và k
+	public static int k = 2;
+	public static int n = 3;
+	
+	// cần 1 mảng để lưu từng giá trị của k
+	public static int[] arr = new int[10];
+	
+	//hàm show
+	public static void show() {
+		for(int i = 0; i < k; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+	}
+	
+	//hàm tổ hợp
+	public static void Try(int i) {//i là index của chuỗi n
+		for(int j = i + 1; j <= n - k + 1; j++) {
+			arr[i] = j;
+			if(i == n - 1) {
+				show();
+			}else {
+				Try(i + 1);
+			}
+		}
+	}
+	//main
+	public static void main(String[] args) {
+		Try(0);
+	}
+}
