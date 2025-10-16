@@ -1,0 +1,47 @@
+package day11;
+
+public class Permutation {
+	//hoán vị
+	
+	public static int n = 4;
+	
+	public static int k = 3;
+	
+	// Cần mảng lưu từng phần tử
+	public static int[] arr = new int[10];
+	
+	// Cần mảng đánh dấu những phần tử đã đi qua
+	public static int[] used = new int[10];
+	
+	public static void show() {
+		for(int i = 1; i <= k; i++) {
+			System.out.print(arr[i]);
+		}
+		System.out.println();
+	}
+	public static void Try(int i) {
+		for(int j = 1; j <= n; j++) {
+			if(used[j] == 0) {// 1 2 3 4 
+				// nếu j = 1 rồi thì used[1] = 1
+				// thì khi chạy Try(i+1) nó vào j = 1 sẽ out
+				//j = 2 thì tiếp tục gán used[2] = 1
+				// hết Try() thì trả lại cho nó = 0
+				used[j] = 1;
+				arr[i] = j;
+				if(i == k) {
+					show();
+				}else {
+					Try(i + 1);
+//					 used[j] = 0; //nếu để đây thì j ở Try(i==k) sẽ không được trở về 0
+				}
+				used[j] = 0; //vị trí đúng
+			}
+//			used[j] = 0;//nếu để đây thì sau khi gán = 1 thì ở lần Try() sau gặp lại j đó
+			//nó lại trả về 0 vì nó không vào if
+			//dẫn đến Try tiếp theo nó lại vào j đó
+		}
+	}
+	public static void main(String[] args) {
+		Try(1);
+	}
+}

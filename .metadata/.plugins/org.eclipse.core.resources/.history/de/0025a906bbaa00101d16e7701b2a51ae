@@ -1,0 +1,39 @@
+package day11;
+
+public class Permutation {
+	//hoán vị
+	
+	public static int n = 4;
+	
+	public static int k = 2;
+	
+	// Cần mảng lưu từng phần tử
+	public static int[] arr = new int[10];
+	
+	// Cần mảng đánh dấu những phần tử đã đi qua
+	public static int[] used = new int[10];
+	
+	public static void show() {
+		for(int i = 1; i <= k; i++) {
+			System.out.print(arr[i]);
+		}
+		System.out.println();
+	}
+	public static void Try(int i) {
+		for(int j = 1; j <= n; j++) {
+			if(used[j] == 0) {
+				used[j] = 1;
+				arr[i] = j;
+				if(i == k) {
+					show();
+				}else {
+					Try(i + 1);
+				}
+				used[j] = 0;
+			}
+		}
+	}
+	public static void main(String[] args) {
+		Try(1);
+	}
+}
