@@ -15,7 +15,7 @@ public class Combination {
 	public static int[] array = new int[10];
 		
 	public static void Try(int i) {
-		for(int j = array[i - 1] + 1; j <= n - k + i; j++) {
+		for(int j = array[i - 1] + 1; j <= n - k + 1; j++) {
 			array[i] = j;
 			if(i == k) {
 				show();
@@ -31,7 +31,7 @@ public class Combination {
 		System.out.println();
 	}
 	public static void main(String[] args) {
-		Try(1);// chuẩn như đã vẽ 
+		Try(1);
 	}
 
 	

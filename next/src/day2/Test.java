@@ -1,5 +1,7 @@
 package day2;
 
+import java.util.Stack;
+
 public class Test {
 	public static void main(String[] args) {
 		MyLinkedListQueue queue = new MyLinkedListQueue();
@@ -24,7 +26,6 @@ public class Test {
 		
 		queue.pop();
 		queue.show();
-		
 		
 		
 		

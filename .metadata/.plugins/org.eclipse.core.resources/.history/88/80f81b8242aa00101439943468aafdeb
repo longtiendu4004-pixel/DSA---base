@@ -1,0 +1,27 @@
+package day10;
+
+import java.util.HashMap;
+
+public class Combination {
+	//tính tổ hợp
+	
+	//n : không gian mẫu
+	public static int n; 
+	//số phần tử cần lấy
+	public static int k; 
+	//Cần 1 array để lưu giá trị của từng vị trí : 1 2 3
+	public static int[] array = new int[10];
+	
+	public static void Try() {
+//		Map<Integer, Integer> map = new HashMap<>();
+	}
+	public static void main(String[] admdammFDA) {
+		String s = "tusena";
+		for(int i = 0; i < s.length(); i++) {
+			System.out.println(s.charAt(i));
+		}
+	}
+	
+	
+	
+}

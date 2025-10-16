@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/day10/combination.jpg</name>
+			<type>1</type>
+			<location>C:/Users/Long/Pictures/combination.jpg</location>
+		</link>
+	</linkedResources>
 </projectDescription>
