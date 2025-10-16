@@ -6,7 +6,7 @@ public class backtracking2 {
 	// n là không gian mẫu 
 	
 	// khai báo n và k
-	public static int k = 3;
+	public static int k = 2;
 	public static int n = 4;
 	
 	// cần 1 mảng để lưu từng giá trị của k
@@ -32,14 +32,11 @@ public class backtracking2 {
 				arr[i] = j;
 				if(i == k) {
 					show();
-					
 				}else {
 					Try(i + 1);
-					used[j] = 0;
 				}
-				
+				used[j] = 0;
 			}
-			
 		}
 	}
 	//main
