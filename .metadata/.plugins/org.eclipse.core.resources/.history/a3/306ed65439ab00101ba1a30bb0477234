@@ -1,0 +1,44 @@
+package day11;
+
+public class backtracking {//đang sai cần sửa
+	public static int n = 4;
+	public static int k = 3;
+	public static int S = 5;
+	public static int count = 0;
+
+	
+	//đánh dấu đã đi qua
+	public static int[] used = new int[10];
+	public static int[] arr = new int[10];
+	public static void show() {
+		for(int i = 1; i <= k; i++) {
+			System.out.print(arr[i]);
+		}
+		System.out.println();
+	}
+	public static void Try(int i ) {
+		for(int j = 1; j <= n; j++) {
+			if(used[j] == 0) {
+				used[j] = 1;
+				arr[i] = j;
+				count += arr[i];
+				if(i == k) {
+					if(count == S) {
+						show();
+					}
+				}else if(count == S) {
+					used[j] = 0;
+					count -= arr[i];
+					return;
+				}else {
+					Try(i + 1);
+				}
+				count -= arr[i];
+				used[j] = 0;
+			}
+		}
+	}
+	public static void main(String[] args) {
+		Try(1);
+	}
+}

@@ -1,0 +1,39 @@
+package day11;
+
+public class backtracking {//đang sai cần sửa
+	public static int n = 4;
+	public static int k = 3;
+	public static int S = 5;
+	public static int count = 0;
+	public static boolean found = false;
+	public static int[] arr = new int[10];
+	public static void show() {
+		for(int i = 1; i <= k; i++) {
+			System.out.print(arr[i]);
+		}
+		System.out.println();
+	}
+	public static void Try(int i ) {
+		for(int j = 1; j <= n; j++) {
+			arr[i] = j;
+			count += arr[i];
+			if(i == k) {
+				if(count == S) {
+					show();
+					found = true;
+				}
+				//count -= arr[i]; đặt đây thì chỉ có vào i == k mới giảm
+			}else {
+				Try(i + 1);
+			}
+			count -= arr[i];
+			if(found == true) {
+				found = false;
+				return;
+			}
+		}
+	}
+	public static void main(String[] args) {
+		Try(1);
+	}
+}

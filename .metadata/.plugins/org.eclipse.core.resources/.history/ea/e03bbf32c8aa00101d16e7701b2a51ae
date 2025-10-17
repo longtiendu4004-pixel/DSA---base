@@ -1,0 +1,33 @@
+package day11;
+
+public class backtracking {
+	public static int n = 4;
+	public static int k = 2;
+	public static int S = 5;
+	public static int count = 0;
+	public static int[] arr = new int[10];
+	public static void show() {
+		for(int i = 1; i <= k; i++) {
+			System.out.print(arr[i]);
+		}
+		System.out.println();
+	}
+	public static void Try(int i ) {
+		for(int j = 1; j <= n; j++) {
+			arr[i] = j;
+			count += arr[i];
+			if(i == k) {
+				if(count == S) {
+					show();
+				}
+				
+			}else {
+				Try(i + 1);
+			}
+			count -= arr[i];
+		}
+	}
+	public static void main(String[] args) {
+		Try(1);
+	}
+}

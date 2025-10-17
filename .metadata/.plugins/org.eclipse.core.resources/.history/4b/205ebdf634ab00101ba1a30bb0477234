@@ -1,0 +1,23 @@
+package day11;
+
+public class Twopointers {
+	public static void find(int n, int S) {
+		int left = 1;
+		int right = n;
+		while(right > 0) {
+			int sum = left + right;
+			if(sum > S) {
+				right--;
+			}else if(sum < S) {
+				left++;
+			}else {
+				System.out.println(left + "  " + right);
+				left++;
+				right--;
+			}
+		}
+	}
+	public static void main(String[] args) {
+		find(5, 5);
+	}
+}
